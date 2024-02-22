@@ -6,21 +6,20 @@
 
         static void Main(string[] args)
         {
-            // how to allow the user to determine the number of lines we use
+            // how to create a number generater
+            Random numberGen = new Random();
 
-            Console.Write("How many cool numbers do you want: ");
+            int roll = 0;
+            int attempts = 0;
 
-            int count = Convert.ToInt32(Console.ReadLine());
-
-           for (int i = 1;i <= count;i++) // will repeat based on the user input
-                //to count down (int i = 10; i > 0; i --)
+            while(roll != 6)
             {
-                double result = Math.Pow(2, i); // this is  a double because its a larger number than a whole 2 digit part. b.c we are raising the power of the number up to a 4 digit number. We could also console.convert into a double as well. 
-
-                // int result = Mat.Pow(2, i); 
-                // Console.Convert result double
-                Console.WriteLine(result);
+                roll = numberGen.Next(1, 7); /// first number is the INCLUSIVE minimum, second number is the EXCLUDED maximum or the limit
+                Console.WriteLine("You rolled: " + roll);
+                attempts++; /// this means, after each attempt, increase attempt + 1
             }
+            // the while loop whill continue until the condition is met, in this case its hitting up to "6" on the die or the number before 7
+            Console.WriteLine("It took you " + attempts + " attempts to roll a six");
 
             Console.ReadKey();
         }

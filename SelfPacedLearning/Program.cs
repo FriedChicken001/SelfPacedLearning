@@ -10,24 +10,30 @@ namespace Self_Paced_Learning
 
         static void Main(string[] args)
         {
-            MeetAlien();
-
+            int result = Multiply(3, 8);
             
+            Console.Write("The result is: " +  result);
+
+            if (result % 2 == 0)
+            {
+                
+                Console.WriteLine("\n" + result + " is an even number!");
+
+            }
+            else
+            {
+                Console.WriteLine(result + " is an uneven number!");
+
+            }
+
 
             Console.ReadKey();
         }
 
-        static void MeetAlien()
+        static int Multiply (int num01, int num02) //within the parenthesis are parameters
         {
-            Random numbergen = new Random();
-
-            string name = "X-" + numbergen.Next(10, 9999);
-
-            int age = numbergen.Next(10, 500);
-
-            Console.WriteLine("Hi, I'm " + name);
-            Console.WriteLine("I'm " + age + " years old.");
-            Console.WriteLine("Oh, and I'm an alien.");
+            int result = num01 * num02;
+            return result;
 
         }
     }

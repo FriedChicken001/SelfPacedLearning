@@ -4,24 +4,28 @@
     {
         static void Main(string[] args)
         {
-            // CHALLENGE: ADD 3 NUMBERS AND FIND THEIR AVERAGE
-            double num01; 
-            double num02;
-            double num03;
+            // if statements are commands that look to meet out a condition
+            // if (condition) is met, within the brackets it will fulfill the command { result }
+            // == - is equal to != - is NOT equal to > - great < - less than >= greater or eaqual to <= lesser or equal to 
 
-            Console.Write("Input a number: "); 
-            num01 = Convert.ToDouble( Console.ReadLine() ); 
 
-            Console.Write("Input a second number: ");
-            num02 = Convert.ToDouble( Console.ReadLine() );
+            Console.WriteLine("Welcome! Tickets are $5. Please insert caseh.");
 
-            Console.Write("Input a second number: ");
-            num03 = Convert.ToDouble(Console.ReadLine());
+            int cash = Convert.ToInt32(Console.ReadLine());
 
-            double addition = num01 + num02 + num03;
-            double average = addition / 3;
-            Console.WriteLine("And the result is " + average);
-       
+            if (cash < 5)
+            {
+                Console.WriteLine("That's not enough money.");
+            }
+            else if (cash == 5)
+            {
+                Console.WriteLine("Here is your ticket!");
+            }
+            else
+            {
+                int change = cash - 5;
+                Console.WriteLine(" Here is your ticket and here is your " + change + " dollars in change.");
+            }
 
             Console.ReadKey();
         }

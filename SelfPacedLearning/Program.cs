@@ -4,28 +4,28 @@
     {
         static void Main(string[] args)
         {
-            // if statements are commands that look to meet out a condition
-            // if (condition) is met, within the brackets it will fulfill the command { result }
-            // == - is equal to != - is NOT equal to > - great < - less than >= greater or eaqual to <= lesser or equal to 
+            int age;
+            int height;
 
+            Console.Write("Please give your age: ");
+            age = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Welcome! Tickets are $5. Please insert caseh.");
+            Console.Write("Please provide your height (inches): ");
+            height = Convert.ToInt32(Console.ReadLine());
 
-            int cash = Convert.ToInt32(Console.ReadLine());
-
-            if (cash < 5)
+            if (age >= 18) 
             {
-                Console.WriteLine("That's not enough money.");
+                if(height >= 60)
+                {
+                    Console.WriteLine("You can enter!"); // having a condition within a condition is called Nesting
+                }
+                else
+                {
+                    Console.WriteLine("You do not meet the requirements.");
+                }
+
             }
-            else if (cash == 5)
-            {
-                Console.WriteLine("Here is your ticket!");
-            }
-            else
-            {
-                int change = cash - 5;
-                Console.WriteLine(" Here is your ticket and here is your " + change + " dollars in change.");
-            }
+           
 
             Console.ReadKey();
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Runtime.InteropServices;
 
 
@@ -10,30 +11,30 @@ namespace Self_Paced_Learning
 
         static void Main(string[] args)
         {
-            int result = Multiply(3, 8);
+            // CHALLENGE: Write a program that counts every word in a sentence.
+
+            Console.WriteLine("Enter a sentence!");
+
+            string userInput = Console.ReadLine();
+
+            int wordCount = CountWords(userInput);
+
             
-            Console.Write("The result is: " +  result);
+            Console.WriteLine("There are " +wordCount + " words in that sentence!");
+            
 
-            if (result % 2 == 0)
-            {
-                
-                Console.WriteLine("\n" + result + " is an even number!");
-
-            }
-            else
-            {
-                Console.WriteLine(result + " is an uneven number!");
-
-            }
 
 
             Console.ReadKey();
         }
 
-        static int Multiply (int num01, int num02) //within the parenthesis are parameters
+        static int CountWords (string userInput) //within the parenthesis are parameters
         {
-            int result = num01 * num02;
-            return result;
+            int wordCount = userInput.Split(' ').Length;
+
+
+
+            return wordCount;
 
         }
     }

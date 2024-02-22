@@ -4,14 +4,20 @@
     {
         static void Main(string[] args)
         {
-            // variable formula: type name = value;
-            Console.WriteLine("What is your name?");
+            int num01; // declaring a variable, we are not assigning a value yet
+            int num02;
 
-            string userName = Console.ReadLine();
+            Console.Write("Input a number: "); // this prompts the user to input on the same line as the question instead of making a new line
 
-            Console.WriteLine("Hello " + userName + ", nice to meet you!");
+            num01 = Convert.ToInt32( Console.ReadLine() ); //this code takes the input and convert it into a number only
 
+            Console.Write("Input a second number: ");
 
+            num02 = Convert.ToInt32( Console.ReadLine() );
+
+            int result = num01 * num02; // takes the inputted numbers from both questions and multiplies them
+            Console.WriteLine("And the result is " + result);
+       
 
             Console.ReadKey();
         }

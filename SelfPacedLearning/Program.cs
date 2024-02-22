@@ -1,28 +1,37 @@
-﻿namespace Self_Paced_Learning
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+
+
+namespace Self_Paced_Learning
 {
     class Program
     {
 
         static void Main(string[] args)
         {
-            string[] movies = new string[4]; // inside the second string[]. you can input the legnth of the array
-            // ^^ this is an empty array that the user inputs the information
+            List<string> shoppingList = new List<string>();
 
-            Console.WriteLine("Type in 4 movies");
+            shoppingList.Add("Dreams");
+            shoppingList.Add("Miracles");
+            shoppingList.Add("Rainbows");
+            shoppingList.Add("Pony");
 
-            for (int i = 0; i < movies.Length; i++)
+            for (int i = 0; i < shoppingList.Count; i++) // when requesting the length of the list, use .count
+                {
+                Console.WriteLine(shoppingList[i]);
+                }
+
+            shoppingList.Remove("Dreams"); //how to remove in general
+            shoppingList.RemoveAt(1);  // removes at a specific point
+
+            Console.WriteLine("------------");
+
+            for (int i = 0; i < shoppingList.Count; i++) // when requesting the length of the list, use .count
             {
-                movies[i] = Console.ReadLine(); // <-- this is storing values in the array
+                Console.WriteLine(shoppingList[i]);
             }
-            
-            Console.WriteLine("\nHere they are alphabetically: ");
 
-            Array.Sort(movies); // this will sort the array in order alphabettically (or numerically if its a number)
-
-            for (int i = 0; i < movies.Length; i++)
-            {
-                Console.WriteLine(movies[i]);
-            }
 
             Console.ReadKey();
         }

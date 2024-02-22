@@ -4,20 +4,23 @@
     {
         static void Main(string[] args)
         {
-            // to use decimals, we want to use floats
-            double num01; // declaring a variable, we are not assigning a value yet
+            // CHALLENGE: ADD 3 NUMBERS AND FIND THEIR AVERAGE
+            double num01; 
             double num02;
+            double num03;
 
-            Console.Write("Input a number: "); // this prompts the user to input on the same line as the question instead of making a new line
-
-            num01 = Convert.ToDouble( Console.ReadLine() ); //this code takes the input and convert it into a number only
+            Console.Write("Input a number: "); 
+            num01 = Convert.ToDouble( Console.ReadLine() ); 
 
             Console.Write("Input a second number: ");
-
             num02 = Convert.ToDouble( Console.ReadLine() );
 
-            double result = num01 * num02; // takes the inputted numbers from both questions and multiplies them
-            Console.WriteLine("And the result is " + result);
+            Console.Write("Input a second number: ");
+            num03 = Convert.ToDouble(Console.ReadLine());
+
+            double addition = num01 + num02 + num03;
+            double average = addition / 3;
+            Console.WriteLine("And the result is " + average);
        
 
             Console.ReadKey();

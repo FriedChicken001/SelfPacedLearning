@@ -10,28 +10,27 @@ namespace Self_Paced_Learning
 
         static void Main(string[] args)
         {
-            List<string> shoppingList = new List<string>();
+            // CHALLENGE: create a program that a teacher can use to input their students and sort them alphabettically 
 
-            shoppingList.Add("Dreams");
-            shoppingList.Add("Miracles");
-            shoppingList.Add("Rainbows");
-            shoppingList.Add("Pony");
+            string[] students = new string[4];
 
-            for (int i = 0; i < shoppingList.Count; i++) // when requesting the length of the list, use .count
-                {
-                Console.WriteLine(shoppingList[i]);
-                }
+            Console.WriteLine("Please provide the studnet's name: ");
 
-            shoppingList.Remove("Dreams"); //how to remove in general
-            shoppingList.RemoveAt(1);  // removes at a specific point
-
-            Console.WriteLine("------------");
-
-            for (int i = 0; i < shoppingList.Count; i++) // when requesting the length of the list, use .count
+            for (int i = 0; i < students.Length; i++)
             {
-                Console.WriteLine(shoppingList[i]);
+                students[i] = Console.ReadLine();
             }
 
+            Console.WriteLine("Thank you for your input! \nHere are your students in alphabetical order: ");
+            Array.Sort(students);
+
+            for (int i = 0;i < students.Length; i++)
+            {
+                Console.WriteLine(students[i]);
+            }
+              
+            
+            
 
             Console.ReadKey();
         }
